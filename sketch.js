@@ -142,21 +142,21 @@ ground = createSprite(350,350,windowWidth, windowHeight);
   ground.addImage("ground",backgroundimg);
 
   //bike
-  bike = createSprite(300,320,50,50);
+  bike = createSprite(320,320,50,50);
   bike.addAnimation("bikeimg",bikeimg);
   bike.scale = 0.6;
 
   //rockstar
-  rockstar = createSprite(width/2-120, height/2-150,50,50);
+  rockstar = createSprite(width/2-520, height/2+250,50,50);
   rockstar.addImage("rockstar",rockstarimg);
   rockstar.scale = 0.3;
 
-  RESTART = createSprite(width/2-20, height/2-100,30,30);
+  RESTART = createSprite(width/2-320, height/2-100,30,30);
   RESTART.addImage("restart",restartimg);
   RESTART.scale=0.6;
   RESTART.visible=false;
 
-  GAMEOVER = createSprite(width/2-20, height/2+200,30,20);
+  GAMEOVER = createSprite(width/2-320, height/2+250,30,20);
   GAMEOVER.addImage("gameover",gameoverimg);
   GAMEOVER.scale=0.8;
   GAMEOVER.visible=false;
@@ -248,7 +248,7 @@ drawSprites();
 textSize(30);
   textFont(20);
   fill ("yellow")
-  text("SCORE: "+ score,width/2-100, height/2-150);
+  text("SCORE: "+ score,width/2-500, height/2+350);
 
 }
 
