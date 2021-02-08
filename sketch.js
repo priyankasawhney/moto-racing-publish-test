@@ -151,12 +151,12 @@ ground = createSprite(350,350,windowWidth, windowHeight);
   rockstar.addImage("rockstar",rockstarimg);
   rockstar.scale = 0.3;
 
-  RESTART = createSprite(width/2-20, height/2,30,30);
+  RESTART = createSprite(width/2-20, height/2-100,30,30);
   RESTART.addImage("restart",restartimg);
   RESTART.scale=0.6;
   RESTART.visible=false;
 
-  GAMEOVER = createSprite(width/2-20, height/2-200,30,20);
+  GAMEOVER = createSprite(width/2-20, height/2+200,30,20);
   GAMEOVER.addImage("gameover",gameoverimg);
   GAMEOVER.scale=0.8;
   GAMEOVER.visible=false;
