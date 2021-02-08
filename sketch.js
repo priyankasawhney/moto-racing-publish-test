@@ -142,21 +142,21 @@ ground = createSprite(350,350,windowWidth, windowHeight);
   ground.addImage("ground",backgroundimg);
 
   //bike
-  bike = createSprite(320,320,50,50);
+  bike = createSprite(320,220,50,50);
   bike.addAnimation("bikeimg",bikeimg);
   bike.scale = 0.6;
 
   //rockstar
-  rockstar = createSprite(width/2-600, height/2+550,50,50);
+  rockstar = createSprite(40,45,50,50);
   rockstar.addImage("rockstar",rockstarimg);
   rockstar.scale = 0.3;
 
-  RESTART = createSprite(width/2-320, height/2+200,30,30);
+  RESTART = createSprite(350,460,30,30);
   RESTART.addImage("restart",restartimg);
   RESTART.scale=0.6;
   RESTART.visible=false;
 
-  GAMEOVER = createSprite(width/2-320, height/2-100,30,20);
+  GAMEOVER = createSprite(350,300,30,20);
   GAMEOVER.addImage("gameover",gameoverimg);
   GAMEOVER.scale=0.8;
   GAMEOVER.visible=false;
@@ -208,7 +208,7 @@ function draw() {
   bike.x = World.mouseX;
 
       
-  if (bike.x<100 || bike.x>600 || CarsGroup.isTouching(bike) || bike.isTouching(StoneGroup)){     
+  if (bike.x<100 || bike.x>600 || CarsGroup.isTouching(bike) || StoneGroup.isTouching(bike)){     
    gameState=END; 
    crashsnd.play();
   }
@@ -248,7 +248,7 @@ drawSprites();
 textSize(30);
   textFont(20);
   fill ("yellow")
-  text("SCORE: "+ score,width/2-550, height/2+550);
+  text("SCORE: "+ score,90, 55);
 
 }
 
@@ -291,7 +291,7 @@ function spawnstone() {
 
 function spawncars() {
   if(frameCount % 60 === 0) {
-     car = createSprite(300,height-100,10,40);
+     car = createSprite(180,700,10,40);
 
     car.velocityY = -(8+6*score/100);
       car.scale = 1.2;
@@ -326,7 +326,7 @@ function spawncars() {
 
 function spawncars2() {
   if(frameCount % 130 === 0) {
-     car = createSprite(400,height-200,10,40);
+     car = createSprite(280,700,10,40);
     car.velocityY = -(8+6*score/100);
       car.scale = 1.2;
                                                                                     
@@ -359,7 +359,7 @@ function spawncars2() {
 
 function spawncars3() {
   if(frameCount % 260  === 0) {
-     car = createSprite(200,height-300,10,40);
+     car = createSprite(420,700,10,40);
     car.velocityY = -(8+6*score/100);
       car.scale = 1.2;
                                                                                     
@@ -392,7 +392,7 @@ function spawncars3() {
 
 function spawncars4() {
   if(frameCount % 180 === 0) {
-     car = createSprite(450,height-250,10,40);
+     car = createSprite(520,700,10,40);
     car.velocityY = -(8+6*score/100);
       car.scale = 1.2;
                                                                                     
