@@ -196,18 +196,18 @@ function draw() {
 }
 
   // right arrow
-  if(touches.length>0 || keyDown("RIGHT_ARROW")) {      
-      bike.velocityX=10;
-      touches = [];
-    }
+//  if(touches.length>0 || keyDown("RIGHT_ARROW")) {      
+  //    bike.velocityX=10;
+  //    touches = [];
+  //  }
  
   //left arrow
-  if(touches.length>0 || keyDown("LEFT_ARROW")) {      
-      bike.velocityX=-10;
-      touches = [];
-    }
+//  if(touches.length>0 || keyDown("LEFT_ARROW")) {      
+ //     bike.velocityX=-10;
+ //     touches = [];
+ //   }
 
- // bike.x = World.mouseX;
+  bike.x = World.mouseX;
 
       
   if (bike.x<100 || bike.x>600 || CarsGroup.isTouching(bike) || StoneGroup.isTouching(bike)){     
